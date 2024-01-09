@@ -19,7 +19,9 @@ jobs:
       - checkout
       - run:
           name: "Say hello"
-          command: "echo Hello, World! from ${CIRCLE_BRANCH} branch"
+          command: |
+            "echo Hello, World! from ${CIRCLE_BRANCH} branch"
+            true $FOO $BAR
 
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
